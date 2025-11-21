@@ -1,0 +1,740 @@
+{
+  "categories": {
+    "writing": {
+      "prompts": [
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Describe a personal experience related to creative_story.",
+          "tags": ["creative_story", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Write a creative scene involving characters who face a creative_story challenge.",
+          "tags": ["creative_story", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "daily_life",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Compose an opinion piece discussing how daily_life affects modern life.",
+          "tags": ["daily_life", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "health",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Write a detailed story about health, including a conflict and resolution.",
+          "tags": ["health", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "opinion",
+          "proficiency": "C1",
+          "complexity": "Beginner",
+          "prompt": "Write a creative scene involving characters who face a opinion challenge.",
+          "tags": ["opinion", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "problem_solving",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Compose an opinion piece discussing how problem_solving affects modern life.",
+          "tags": ["problem_solving", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "opinion",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Write a creative scene involving characters who face a opinion challenge.",
+          "tags": ["opinion", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "food",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Compose an opinion piece discussing how food affects modern life.",
+          "tags": ["food", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "culture",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Compose an opinion piece discussing how culture affects modern life.",
+          "tags": ["culture", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "travel",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Write a detailed story about travel, including a conflict and resolution.",
+          "tags": ["travel", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "opinion",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Write a detailed story about opinion, including a conflict and resolution.",
+          "tags": ["opinion", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "opinion",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Compose an opinion piece discussing how opinion affects modern life.",
+          "tags": ["opinion", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "relationships",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Describe a personal experience related to relationships.",
+          "tags": ["relationships", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "daily_life",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Describe a personal experience related to daily_life.",
+          "tags": ["daily_life", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Describe a personal experience related to creative_story.",
+          "tags": ["creative_story", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "hobbies",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Write a creative scene involving characters who face a hobbies challenge.",
+          "tags": ["hobbies", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "technology",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Write a detailed story about technology, including a conflict and resolution.",
+          "tags": ["technology", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "opinion",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Compose an opinion piece discussing how opinion affects modern life.",
+          "tags": ["opinion", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "food",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Write a detailed story about food, including a conflict and resolution.",
+          "tags": ["food", "writing"]
+        },
+        {
+          "language": "en",
+          "category": "writing",
+          "topic": "travel",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Write a creative scene involving characters who face a travel challenge.",
+          "tags": ["travel", "writing"]
+        }
+      ]
+    },
+    "dialogue": {
+      "prompts": [
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "daily_life",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Write a conversation between two people discussing daily_life.",
+          "tags": ["daily_life", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "career",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Script a conversation between friends planning something related to career.",
+          "tags": ["career", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "culture",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Write a conversation between two people discussing culture.",
+          "tags": ["culture", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "relationships",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Write a conversation between two people discussing relationships.",
+          "tags": ["relationships", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "career",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Write a dialogue between coworkers about career.",
+          "tags": ["career", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "education",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Script a conversation between friends planning something related to education.",
+          "tags": ["education", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "relationships",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Script a conversation between friends planning something related to relationships.",
+          "tags": ["relationships", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Create a dialogue where one person tries to solve a problem_solving issue.",
+          "tags": ["problem_solving", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "environment",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Script a conversation between friends planning something related to environment.",
+          "tags": ["environment", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "relationships",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Write a conversation between two people discussing relationships.",
+          "tags": ["relationships", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "creative_story",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Create a dialogue where one person tries to solve a creative_story issue.",
+          "tags": ["creative_story", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "career",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Create a dialogue where one person tries to solve a career issue.",
+          "tags": ["career", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Write a dialogue between coworkers about problem_solving.",
+          "tags": ["problem_solving", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "career",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Write a conversation between two people discussing career.",
+          "tags": ["career", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "opinion",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Script a conversation between friends planning something related to opinion.",
+          "tags": ["opinion", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Write a conversation between two people discussing problem_solving.",
+          "tags": ["problem_solving", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Write a conversation between two people discussing problem_solving.",
+          "tags": ["problem_solving", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "travel",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Script a conversation between friends planning something related to travel.",
+          "tags": ["travel", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Script a conversation between friends planning something related to problem_solving.",
+          "tags": ["problem_solving", "dialogue"]
+        },
+        {
+          "language": "en",
+          "category": "dialogue",
+          "topic": "relationships",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Write a conversation between two people discussing relationships.",
+          "tags": ["relationships", "dialogue"]
+        }
+      ]
+    },
+    "grammar": {
+      "prompts": [
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "education",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Write a paragraph using at least five adjectives describing education.",
+          "tags": ["education", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "family",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Create ten example sentences practicing conditionals based on family.",
+          "tags": ["family", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "education",
+          "proficiency": "C1",
+          "complexity": "Beginner",
+          "prompt": "Write a paragraph using at least five adjectives describing education.",
+          "tags": ["education", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "health",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Write a paragraph using at least five adjectives describing health.",
+          "tags": ["health", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "relationships",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Create ten example sentences practicing conditionals based on relationships.",
+          "tags": ["relationships", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "technology",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Create ten example sentences practicing conditionals based on technology.",
+          "tags": ["technology", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "education",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Rewrite a description of education using only passive voice.",
+          "tags": ["education", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "education",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Write five sentences using the past tense related to education.",
+          "tags": ["education", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "environment",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Write a paragraph using at least five adjectives describing environment.",
+          "tags": ["environment", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "career",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Write five sentences using the past tense related to career.",
+          "tags": ["career", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "health",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Write five sentences using the past tense related to health.",
+          "tags": ["health", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "technology",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Write five sentences using the past tense related to technology.",
+          "tags": ["technology", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "travel",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Write a paragraph using at least five adjectives describing travel.",
+          "tags": ["travel", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "relationships",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Rewrite a description of relationships using only passive voice.",
+          "tags": ["relationships", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "environment",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Write five sentences using the past tense related to environment.",
+          "tags": ["environment", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "environment",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Write a paragraph using at least five adjectives describing environment.",
+          "tags": ["environment", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "problem_solving",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Create ten example sentences practicing conditionals based on problem_solving.",
+          "tags": ["problem_solving", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "travel",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Write five sentences using the past tense related to travel.",
+          "tags": ["travel", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "daily_life",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Create ten example sentences practicing conditionals based on daily_life.",
+          "tags": ["daily_life", "grammar"]
+        },
+        {
+          "language": "en",
+          "category": "grammar",
+          "topic": "food",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Create ten example sentences practicing conditionals based on food.",
+          "tags": ["food", "grammar"]
+        }
+      ]
+    },
+    "conversation": {
+      "prompts": [
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "education",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Describe a time you dealt with education.",
+          "tags": ["education", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "travel",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Explain how travel influences your life.",
+          "tags": ["travel", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "family",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Explain your opinion about family in five sentences.",
+          "tags": ["family", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "hobbies",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Describe a time you dealt with hobbies.",
+          "tags": ["hobbies", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "travel",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Explain how travel influences your life.",
+          "tags": ["travel", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "problem_solving",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Describe a time you dealt with problem_solving.",
+          "tags": ["problem_solving", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "culture",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Explain your opinion about culture in five sentences.",
+          "tags": ["culture", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "technology",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Explain how technology influences your life.",
+          "tags": ["technology", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "technology",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Describe a time you dealt with technology.",
+          "tags": ["technology", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "food",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Give advice to someone dealing with food.",
+          "tags": ["food", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "family",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Give advice to someone dealing with family.",
+          "tags": ["family", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "technology",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Explain how technology influences your life.",
+          "tags": ["technology", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "technology",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Give advice to someone dealing with technology.",
+          "tags": ["technology", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "education",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Explain your opinion about education in five sentences.",
+          "tags": ["education", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "opinion",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Give advice to someone dealing with opinion.",
+          "tags": ["opinion", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "health",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Explain how health influences your life.",
+          "tags": ["health", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "relationships",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Explain your opinion about relationships in five sentences.",
+          "tags": ["relationships", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "health",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Describe a time you dealt with health.",
+          "tags": ["health", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "food",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Describe a time you dealt with food.",
+          "tags": ["food", "conversation"]
+        },
+        {
+          "language": "en",
+          "category": "conversation",
+          "topic": "education",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Give advice to someone dealing with education.",
+          "tags": ["education", "conversation"]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,980 @@
+{
+  "categories": {
+    "writing": {
+      "prompts": [
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "technology",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Redacta un texto de opinión sobre cómo technology afecta la vida moderna.",
+          "tags": [
+            "technology",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Describe una experiencia personal relacionada con creative_story.",
+          "tags": [
+            "creative_story",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "C1",
+          "complexity": "Beginner",
+          "prompt": "Escribe una escena creativa donde los personajes enfrenten un desafío de creative_story.",
+          "tags": [
+            "creative_story",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "technology",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Escribe una historia detallada sobre technology, incluyendo un conflicto y una solución.",
+          "tags": [
+            "technology",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "education",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Describe una experiencia personal relacionada con education.",
+          "tags": [
+            "education",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "food",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Redacta un texto de opinión sobre cómo food afecta la vida moderna.",
+          "tags": [
+            "food",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "hobbies",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Escribe una escena creativa donde los personajes enfrenten un desafío de hobbies.",
+          "tags": [
+            "hobbies",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "career",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Escribe una escena creativa donde los personajes enfrenten un desafío de career.",
+          "tags": [
+            "career",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "problem_solving",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Escribe una escena creativa donde los personajes enfrenten un desafío de problem_solving.",
+          "tags": [
+            "problem_solving",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "culture",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Describe una experiencia personal relacionada con culture.",
+          "tags": [
+            "culture",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "technology",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Escribe una historia detallada sobre technology, incluyendo un conflicto y una solución.",
+          "tags": [
+            "technology",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Escribe una historia detallada sobre creative_story, incluyendo un conflicto y una solución.",
+          "tags": [
+            "creative_story",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "food",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Describe una experiencia personal relacionada con food.",
+          "tags": [
+            "food",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "problem_solving",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Describe una experiencia personal relacionada con problem_solving.",
+          "tags": [
+            "problem_solving",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "travel",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Describe una experiencia personal relacionada con travel.",
+          "tags": [
+            "travel",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "creative_story",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Escribe una escena creativa donde los personajes enfrenten un desafío de creative_story.",
+          "tags": [
+            "creative_story",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "opinion",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Describe una experiencia personal relacionada con opinion.",
+          "tags": [
+            "opinion",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "career",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Redacta un texto de opinión sobre cómo career afecta la vida moderna.",
+          "tags": [
+            "career",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "health",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Escribe una escena creativa donde los personajes enfrenten un desafío de health.",
+          "tags": [
+            "health",
+            "writing"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "writing",
+          "topic": "technology",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Escribe una historia detallada sobre technology, incluyendo un conflicto y una solución.",
+          "tags": [
+            "technology",
+            "writing"
+          ]
+        }
+      ]
+    },
+    "dialogue": {
+      "prompts": [
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "health",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Escribe un diálogo entre dos personas que hablan sobre health.",
+          "tags": [
+            "health",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "career",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Escribe una conversación entre compañeros de trabajo sobre career.",
+          "tags": [
+            "career",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "family",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Escribe un diálogo entre dos personas que hablan sobre family.",
+          "tags": [
+            "family",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "travel",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Crea un diálogo donde una persona intenta resolver un problema de travel.",
+          "tags": [
+            "travel",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Escribe una conversación entre compañeros de trabajo sobre problem_solving.",
+          "tags": [
+            "problem_solving",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "family",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Escribe una conversación entre compañeros de trabajo sobre family.",
+          "tags": [
+            "family",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "daily_life",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Escribe un diálogo entre dos personas que hablan sobre daily_life.",
+          "tags": [
+            "daily_life",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "hobbies",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Redacta un diálogo entre amigos planificando algo relacionado con hobbies.",
+          "tags": [
+            "hobbies",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "creative_story",
+          "proficiency": "B1",
+          "complexity": "Intermediate",
+          "prompt": "Redacta un diálogo entre amigos planificando algo relacionado con creative_story.",
+          "tags": [
+            "creative_story",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "hobbies",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Escribe una conversación entre compañeros de trabajo sobre hobbies.",
+          "tags": [
+            "hobbies",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "technology",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Escribe una conversación entre compañeros de trabajo sobre technology.",
+          "tags": [
+            "technology",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "hobbies",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Escribe un diálogo entre dos personas que hablan sobre hobbies.",
+          "tags": [
+            "hobbies",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "environment",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Redacta un diálogo entre amigos planificando algo relacionado con environment.",
+          "tags": [
+            "environment",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "relationships",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Crea un diálogo donde una persona intenta resolver un problema de relationships.",
+          "tags": [
+            "relationships",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "problem_solving",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Crea un diálogo donde una persona intenta resolver un problema de problem_solving.",
+          "tags": [
+            "problem_solving",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "career",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Escribe una conversación entre compañeros de trabajo sobre career.",
+          "tags": [
+            "career",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "environment",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Crea un diálogo donde una persona intenta resolver un problema de environment.",
+          "tags": [
+            "environment",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "technology",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Escribe un diálogo entre dos personas que hablan sobre technology.",
+          "tags": [
+            "technology",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "technology",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Crea un diálogo donde una persona intenta resolver un problema de technology.",
+          "tags": [
+            "technology",
+            "dialogue"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "dialogue",
+          "topic": "daily_life",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Crea un diálogo donde una persona intenta resolver un problema de daily_life.",
+          "tags": [
+            "daily_life",
+            "dialogue"
+          ]
+        }
+      ]
+    },
+    "grammar": {
+      "prompts": [
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "hobbies",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Reescribe una descripción de hobbies usando solo voz pasiva.",
+          "tags": [
+            "hobbies",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "environment",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Reescribe una descripción de environment usando solo voz pasiva.",
+          "tags": [
+            "environment",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "daily_life",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en daily_life.",
+          "tags": [
+            "daily_life",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "food",
+          "proficiency": "C1",
+          "complexity": "Beginner",
+          "prompt": "Escribe cinco oraciones en pasado relacionadas con food.",
+          "tags": [
+            "food",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "hobbies",
+          "proficiency": "B2",
+          "complexity": "Academic",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en hobbies.",
+          "tags": [
+            "hobbies",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "career",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Reescribe una descripción de career usando solo voz pasiva.",
+          "tags": [
+            "career",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "family",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Escribe cinco oraciones en pasado relacionadas con family.",
+          "tags": [
+            "family",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "food",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en food.",
+          "tags": [
+            "food",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "culture",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en culture.",
+          "tags": [
+            "culture",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "technology",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en technology.",
+          "tags": [
+            "technology",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "daily_life",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Escribe cinco oraciones en pasado relacionadas con daily_life.",
+          "tags": [
+            "daily_life",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "hobbies",
+          "proficiency": "B2",
+          "complexity": "Advanced",
+          "prompt": "Escribe cinco oraciones en pasado relacionadas con hobbies.",
+          "tags": [
+            "hobbies",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "problem_solving",
+          "proficiency": "C1",
+          "complexity": "Advanced",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en problem_solving.",
+          "tags": [
+            "problem_solving",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "travel",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en travel.",
+          "tags": [
+            "travel",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "health",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Crea diez oraciones de práctica usando condicionales basadas en health.",
+          "tags": [
+            "health",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "travel",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Escribe cinco oraciones en pasado relacionadas con travel.",
+          "tags": [
+            "travel",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "problem_solving",
+          "proficiency": "C1",
+          "complexity": "Beginner",
+          "prompt": "Redacta un párrafo con al menos cinco adjetivos describiendo problem_solving.",
+          "tags": [
+            "problem_solving",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "problem_solving",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Escribe cinco oraciones en pasado relacionadas con problem_solving.",
+          "tags": [
+            "problem_solving",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "creative_story",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Redacta un párrafo con al menos cinco adjetivos describiendo creative_story.",
+          "tags": [
+            "creative_story",
+            "grammar"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "grammar",
+          "topic": "daily_life",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Redacta un párrafo con al menos cinco adjetivos describiendo daily_life.",
+          "tags": [
+            "daily_life",
+            "grammar"
+          ]
+        }
+      ]
+    },
+    "conversation": {
+      "prompts": [
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "creative_story",
+          "proficiency": "B1",
+          "complexity": "Academic",
+          "prompt": "Describe un momento en que enfrentaste creative_story.",
+          "tags": [
+            "creative_story",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "problem_solving",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Explica tu opinión sobre problem_solving en cinco oraciones.",
+          "tags": [
+            "problem_solving",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "travel",
+          "proficiency": "B2",
+          "complexity": "Intermediate",
+          "prompt": "Explica tu opinión sobre travel en cinco oraciones.",
+          "tags": [
+            "travel",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "family",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Explica cómo family influye en tu vida.",
+          "tags": [
+            "family",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "culture",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Da un consejo a alguien que esté lidiando con culture.",
+          "tags": [
+            "culture",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "creative_story",
+          "proficiency": "A2",
+          "complexity": "Academic",
+          "prompt": "Describe un momento en que enfrentaste creative_story.",
+          "tags": [
+            "creative_story",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "food",
+          "proficiency": "C1",
+          "complexity": "Academic",
+          "prompt": "Describe un momento en que enfrentaste food.",
+          "tags": [
+            "food",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "daily_life",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Explica cómo daily_life influye en tu vida.",
+          "tags": [
+            "daily_life",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "education",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Explica tu opinión sobre education en cinco oraciones.",
+          "tags": [
+            "education",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "education",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Explica tu opinión sobre education en cinco oraciones.",
+          "tags": [
+            "education",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "relationships",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Explica cómo relationships influye en tu vida.",
+          "tags": [
+            "relationships",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "problem_solving",
+          "proficiency": "A2",
+          "complexity": "Beginner",
+          "prompt": "Describe un momento en que enfrentaste problem_solving.",
+          "tags": [
+            "problem_solving",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "problem_solving",
+          "proficiency": "B1",
+          "complexity": "Beginner",
+          "prompt": "Explica cómo problem_solving influye en tu vida.",
+          "tags": [
+            "problem_solving",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "education",
+          "proficiency": "C1",
+          "complexity": "Intermediate",
+          "prompt": "Explica cómo education influye en tu vida.",
+          "tags": [
+            "education",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "hobbies",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Describe un momento en que enfrentaste hobbies.",
+          "tags": [
+            "hobbies",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "problem_solving",
+          "proficiency": "A2",
+          "complexity": "Advanced",
+          "prompt": "Explica cómo problem_solving influye en tu vida.",
+          "tags": [
+            "problem_solving",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "opinion",
+          "proficiency": "B1",
+          "complexity": "Advanced",
+          "prompt": "Explica tu opinión sobre opinion en cinco oraciones.",
+          "tags": [
+            "opinion",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "career",
+          "proficiency": "A2",
+          "complexity": "Intermediate",
+          "prompt": "Da un consejo a alguien que esté lidiando con career.",
+          "tags": [
+            "career",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "culture",
+          "proficiency": "B2",
+          "complexity": "Beginner",
+          "prompt": "Explica cómo culture influye en tu vida.",
+          "tags": [
+            "culture",
+            "conversation"
+          ]
+        },
+        {
+          "language": "es",
+          "category": "conversation",
+          "topic": "food",
+          "proficiency": "C1",
+          "complexity": "Beginner",
+          "prompt": "Explica cómo food influye en tu vida.",
+          "tags": [
+            "food",
+            "conversation"
+          ]
+        }
+      ]
+    }
+  }
+}
