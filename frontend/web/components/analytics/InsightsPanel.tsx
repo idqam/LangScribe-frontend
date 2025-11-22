@@ -1,9 +1,20 @@
 "use client";
+import { useTempAnStore } from "@/app/store/TempAnStore";
 import { useWritingPadStore } from "@/app/store/WritingStore";
+import { useEffect, useState } from "react";
 
 export const InsightsPanel = () => {
   const { text, wordCount, charCount, sentenceCount, setText } =
     useWritingPadStore();
+  const { savedText } = useTempAnStore();
+  const uniqueWords = new Set(
+    savedText
+      .toLowerCase()
+      .replace(/[^\w\s]/g, "")
+      .split(/\s+/)
+      .filter(Boolean)
+  ).size;
+
   return (
     <div className="space-y-4">
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
@@ -68,7 +79,7 @@ export const InsightsPanel = () => {
               </svg>
             }
             label="Unique Words"
-            value="142"
+            value={uniqueWords}
             subtext={""}
             // subtext="+8 from last entry"
             positive

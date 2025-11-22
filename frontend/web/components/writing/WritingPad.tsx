@@ -1,5 +1,6 @@
 "use client";
 import { useWritingPadStore } from "@/app/store/WritingStore";
+import { LogButton } from "./LogButton";
 
 export const WritingPad = () => {
   const { text, wordCount, charCount, sentenceCount, setText } =
@@ -69,12 +70,8 @@ export const WritingPad = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <button className="px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors">
-            Save Draft
-          </button>
-          <button className="px-6 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium shadow-sm hover:shadow-md flex items-center gap-2">
-            Log
-          </button>
+         
+          <LogButton />
         </div>
       </div>
     </div>
