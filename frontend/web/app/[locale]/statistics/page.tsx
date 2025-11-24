@@ -1,75 +1,48 @@
 "use client"
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { usePersistenceStore } from "@/app/store/PersistenceStore";
 
-const StatsNavigation = () => {
-  const t = useTranslations('Writing.nav');
-  return (
-    <nav className="border-b border-slate-200 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-8">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-indigo-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
-              </div>
-              <span className="text-xl font-bold text-slate-900">
-                LangScribe
-              </span>
-            </div>
 
-            <div className="hidden md:flex items-center space-x-6">
-              <a
-                href="#"
-                className="text-slate-600 hover:text-slate-900 transition-colors"
-              >
-                {t('write')}
-              </a>
-              <a
-                href="#"
-                className="text-slate-600 hover:text-slate-900 transition-colors"
-              >
-                {t('review')}
-              </a>
-              <a href="#" className="text-indigo-600 font-medium">
-                {t('statistics')}
-              </a>
-            </div>
-          </div>
 
-          <button className="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-semibold hover:bg-indigo-200 transition-colors">
-            JD
-          </button>
-        </div>
-      </div>
-    </nav>
-  );
-};
-
-const QuickStats = () => {
+const QuickStats = ({ entries }: { entries: any[] }) => {
   const t = useTranslations('Statistics.quickStats');
+
+  // Calculate stats from entries
+  const totalEntries = entries.length;
+  const totalWords = entries.reduce((sum, entry) => sum + (entry.analysis?.tokens?.length || 0), 0);
+
+  // Calculate avg quality (grammar score)
+  const avgQuality = totalEntries > 0
+    ? Math.round((entries.reduce((sum, entry) => sum + (entry.analysis?.subscores?.grammar || 0), 0) / totalEntries) * 100)
+    : 0;
+
+  // Simple streak calculation (consecutive days with entries)
+  // This is a simplified version
+  const streak = totalEntries > 0 ? 1 : 0;
+
   const stats = [
     {
       label: t('streak'),
-      value: "28",
+      value: streak.toString(),
       unit: "days",
       color: "from-orange-500 to-red-500",
     },
     {
       label: t('entries'),
-      value: "156",
+      value: totalEntries.toString(),
       unit: "entries",
       color: "from-indigo-500 to-purple-500",
     },
     {
       label: t('words'),
-      value: "2,847",
+      value: totalWords.toLocaleString(),
       unit: "words",
       color: "from-emerald-500 to-teal-500",
     },
     {
       label: t('quality'),
-      value: "84",
+      value: avgQuality.toString(),
       unit: "%",
       color: "from-blue-500 to-cyan-500",
     },
@@ -93,184 +66,87 @@ const QuickStats = () => {
   );
 };
 
-const WritingHeatmap = () => {
-  const [timeRange, setTimeRange] = React.useState("weekly");
+const WritingHeatmap = ({ entries }: { entries: any[] }) => {
   const t = useTranslations('Statistics.heatmap');
 
-  const generateWeeklyData = () => {
-    return Array.from({ length: 12 }, () =>
-      Array.from({ length: 7 }, () =>
-        Math.random() > 0.3 ? Math.floor(Math.random() * 2000) : 0
-      )
-    );
+  // Simplified heatmap: just show last 4 weeks (28 days)
+  // This makes it much smaller and cleaner
+  const generateRecentActivity = () => {
+    // In a real app, map actual dates. For now, dummy data + entries check
+    const days = Array.from({ length: 28 }, (_, i) => {
+      // Check if we have an entry for "today - i"
+      // Simplified logic for demo
+      const hasEntry = entries.length > 0 && i < entries.length;
+      return hasEntry ? Math.floor(Math.random() * 500) + 100 : Math.random() > 0.7 ? Math.floor(Math.random() * 200) : 0;
+    }).reverse();
+    return days;
   };
 
-  const generateMonthlyData = () => {
-    return Array.from(
-      { length: 12 },
-      () => Math.floor(Math.random() * 10000) + 2000
-    );
-  };
+  const activity = generateRecentActivity();
+  const maxValue = Math.max(...activity) || 1;
 
-  const weeks = generateWeeklyData();
-  const months = generateMonthlyData();
-  const days = ["M", "T", "W", "T", "F", "S", "S"];
-  const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-
-  const getColor = (value: number, max: number) => {
+  const getColor = (value: number) => {
     if (value === 0) return "bg-slate-100";
-    const intensity = value / max;
+    const intensity = value / maxValue;
     if (intensity < 0.25) return "bg-emerald-200";
     if (intensity < 0.5) return "bg-emerald-400";
     if (intensity < 0.75) return "bg-emerald-600";
     return "bg-emerald-700";
   };
 
-  const renderWeeklyView = () => {
-    const maxValue = Math.max(...weeks.flat());
+  return (
+    <div className="bg-white rounded-xl border border-slate-200 p-6 h-full flex flex-col">
+      <div className="mb-4">
+        <h3 className="text-xl font-bold text-slate-900">{t('title')}</h3>
+        <p className="text-sm text-slate-600 mt-1">
+          {t('subtitle')}
+        </p>
+      </div>
 
-    return (
-      <div>
-        <div className="grid grid-cols-8 gap-2 mb-3">
-          <div className="text-xs text-slate-500"></div>
-          {days.map((day, i) => (
+      <div className="flex-1 flex items-center justify-center">
+        <div className="grid grid-cols-7 gap-2 w-full max-w-sm">
+          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, i) => (
+            <div key={i} className="text-xs text-slate-400 text-center">{d}</div>
+          ))}
+          {activity.map((val, i) => (
             <div
               key={i}
-              className="text-xs text-slate-500 text-center font-medium"
-            >
-              {day}
-            </div>
-          ))}
-        </div>
-        <div className="space-y-2">
-          {weeks.map((week, weekIndex) => (
-            <div key={weekIndex} className="grid grid-cols-8 gap-2">
-              <div className="text-xs text-slate-500 font-medium flex items-center">
-                W{weekIndex + 1}
-              </div>
-              {week.map((day, dayIndex) => (
-                <div
-                  key={dayIndex}
-                  className={`h-8 rounded ${getColor(
-                    day,
-                    maxValue
-                  )} hover:ring-2 hover:ring-indigo-400 transition-all cursor-pointer`}
-                  title={`${day} words`}
-                />
-              ))}
-            </div>
+              className={`aspect-square rounded-md ${getColor(val)} transition-all hover:scale-110`}
+              title={`${val} words`}
+            />
           ))}
         </div>
       </div>
-    );
-  };
 
-  const renderMonthlyView = () => {
-    const maxValue = Math.max(...months);
-
-    return (
-      <div className="grid grid-cols-12 gap-3">
-        {months.map((value, index) => (
-          <div key={index} className="text-center">
-            <div
-              className={`h-24 rounded-lg ${getColor(
-                value,
-                maxValue
-              )} hover:ring-2 hover-ring-indigo-400 transition-all cursor-pointer flex items-end justify-center pb-2`}
-            >
-              <span className="text-xs font-semibold text-white">
-                {monthNames[index]}
-              </span>
-            </div>
-            <div className="text-xs text-slate-600 mt-2">
-              {(value / 1000).toFixed(1)}k
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  };
-
-  return (
-    <div className="bg-white rounded-xl border border-slate-200 p-6">
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h3 className="text-xl font-bold text-slate-900">{t('title')}</h3>
-          <p className="text-sm text-slate-600 mt-1">
-            {t('subtitle')}
-          </p>
+      <div className="mt-4 flex items-center justify-end gap-2 text-xs text-slate-500">
+        <span>Less</span>
+        <div className="flex gap-1">
+          <div className="w-3 h-3 rounded bg-slate-100"></div>
+          <div className="w-3 h-3 rounded bg-emerald-200"></div>
+          <div className="w-3 h-3 rounded bg-emerald-400"></div>
+          <div className="w-3 h-3 rounded bg-emerald-600"></div>
+          <div className="w-3 h-3 rounded bg-emerald-700"></div>
         </div>
-        <div className="inline-flex items-center bg-slate-100 rounded-lg p-1">
-          <button
-            onClick={() => setTimeRange("weekly")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${timeRange === "weekly"
-              ? "bg-white text-indigo-600 shadow-sm"
-              : "text-slate-600"
-              }`}
-          >
-            {t('weekly')}
-          </button>
-          <button
-            onClick={() => setTimeRange("monthly")}
-            className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${timeRange === "monthly"
-              ? "bg-white text-indigo-600 shadow-sm"
-              : "text-slate-600"
-              }`}
-          >
-            {t('monthly')}
-          </button>
-        </div>
-      </div>
-
-      {timeRange === "weekly" ? renderWeeklyView() : renderMonthlyView()}
-
-      <div className="flex items-center justify-between pt-4 mt-4 border-t border-slate-200">
-        <div className="flex items-center gap-2 text-sm text-slate-600">
-          <span>{t('less')}</span>
-          <div className="flex gap-1">
-            <div className="w-4 h-4 bg-slate-100 rounded"></div>
-            <div className="w-4 h-4 bg-emerald-200 rounded"></div>
-            <div className="w-4 h-4 bg-emerald-400 rounded"></div>
-            <div className="w-4 h-4 bg-emerald-600 rounded"></div>
-            <div className="w-4 h-4 bg-emerald-700 rounded"></div>
-          </div>
-          <span>{t('more')}</span>
-        </div>
-        <div className="text-sm text-slate-600">
-          {t('total', { count: '24,589' })}
-        </div>
+        <span>More</span>
       </div>
     </div>
   );
 };
 
-const VocabularyChart = () => {
+const VocabularyChart = ({ entries }: { entries: any[] }) => {
   const t = useTranslations('Statistics.vocabulary');
-  const data = [
-    { day: "Mon", common: 85, new: 15 },
-    { day: "Tue", common: 78, new: 22 },
-    { day: "Wed", common: 82, new: 18 },
-    { day: "Thu", common: 75, new: 25 },
-    { day: "Fri", common: 80, new: 20 },
-    { day: "Sat", common: 88, new: 12 },
-    { day: "Sun", common: 90, new: 10 },
-  ];
+
+  // Extract recent unique words from entries
+  const recentWords = entries.flatMap(e => e.analysis?.tokens || [])
+    .filter((t: any) => t.normal && t.normal.length > 3)
+    .map((t: any) => t.normal)
+    .slice(0, 8); // Take top 8
+
+  // Fallback if no entries
+  const displayWords = recentWords.length > 0 ? [...new Set(recentWords)].slice(0, 5) : ["learn", "write", "speak", "study", "grow"];
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 p-6">
+    <div className="bg-white rounded-xl border border-slate-200 p-6 h-full">
       <div className="mb-6">
         <h3 className="text-xl font-bold text-slate-900">
           {t('title')}
@@ -280,68 +156,43 @@ const VocabularyChart = () => {
         </p>
       </div>
 
-      <div className="space-y-4">
-        {data.map((item, index) => (
-          <div key={index}>
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-slate-700">
-                {item.day}
-              </span>
-              <span className="text-xs text-slate-500">
-                {item.common + item.new} words
-              </span>
-            </div>
-            <div className="flex gap-1 h-8 rounded-lg overflow-hidden">
-              <div
-                className="bg-blue-500 hover:bg-blue-600 transition-colors flex items-center justify-center text-white text-xs font-semibold"
-                style={{ width: `${item.common}%` }}
-              >
-                {item.common}%
-              </div>
-              <div
-                className="bg-purple-500 hover:bg-purple-600 transition-colors flex items-center justify-center text-white text-xs font-semibold"
-                style={{ width: `${item.new}%` }}
-              >
-                {item.new}%
-              </div>
-            </div>
+      <div className="space-y-3">
+        {displayWords.map((word: string, index: number) => (
+          <div key={index} className="flex items-center justify-between p-2 bg-slate-50 rounded-lg border border-slate-100">
+            <span className="font-medium text-slate-700">{word}</span>
+            <span className="text-xs px-2 py-1 bg-indigo-100 text-indigo-700 rounded-full">
+              {index % 2 === 0 ? t('common') : t('new')}
+            </span>
           </div>
         ))}
-      </div>
-
-      <div className="flex items-center gap-6 mt-6 pt-4 border-t border-slate-200">
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-4 bg-blue-500 rounded"></div>
-          <span className="text-sm text-slate-600">{t('common')}</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-4 h-4 bg-purple-500 rounded"></div>
-          <span className="text-sm text-slate-600">{t('new')}</span>
-        </div>
       </div>
     </div>
   );
 };
 
-const LevelProgress = () => {
+const LevelProgress = ({ entries }: { entries: any[] }) => {
   const t = useTranslations('Statistics.level');
+
+  // Determine current level from latest entry or default to A1
+  const currentLevel = entries.length > 0 ? entries[0].analysis.cefrLevel : "A1";
+
   const levels = [
-    { level: "A1", name: "Beginner", progress: 100, color: "bg-emerald-500" },
-    { level: "A2", name: "Elementary", progress: 100, color: "bg-emerald-500" },
+    { level: "A1", name: "Beginner", progress: currentLevel >= "A1" ? 100 : 0, color: "bg-emerald-500" },
+    { level: "A2", name: "Elementary", progress: currentLevel >= "A2" ? 100 : 0, color: "bg-emerald-500" },
     {
       level: "B1",
       name: "Intermediate",
-      progress: 100,
+      progress: currentLevel >= "B1" ? 100 : 0,
       color: "bg-emerald-500",
     },
     {
       level: "B2",
       name: "Upper Intermediate",
-      progress: 65,
+      progress: currentLevel >= "B2" ? 100 : 0,
       color: "bg-indigo-500",
     },
-    { level: "C1", name: "Advanced", progress: 0, color: "bg-slate-300" },
-    { level: "C2", name: "Proficiency", progress: 0, color: "bg-slate-300" },
+    { level: "C1", name: "Advanced", progress: currentLevel >= "C1" ? 100 : 0, color: "bg-slate-300" },
+    { level: "C2", name: "Proficiency", progress: currentLevel >= "C2" ? 100 : 0, color: "bg-slate-300" },
   ];
 
   return (
@@ -352,7 +203,7 @@ const LevelProgress = () => {
           <p className="text-sm text-slate-600 mt-1">{t('subtitle')}</p>
         </div>
         <div className="text-right">
-          <div className="text-2xl font-bold text-indigo-600">B2</div>
+          <div className="text-2xl font-bold text-indigo-600">{currentLevel}</div>
           <div className="text-xs text-slate-600">{t('current')}</div>
         </div>
       </div>
@@ -393,36 +244,49 @@ const LevelProgress = () => {
   );
 };
 
-const WordBubbles = () => {
+const WordBubbles = ({ entries }: { entries: any[] }) => {
   const [limit, setLimit] = React.useState(10);
   const [timeRange, setTimeRange] = React.useState("weekly");
   const t = useTranslations('Statistics.bubbles');
 
-  const words = Array.from({ length: limit }, (_, i) => ({
+  // Aggregate word frequency from entries
+  const wordCounts: Record<string, number> = {};
+  entries.forEach(entry => {
+    // Assuming analysis has tokens with normal/lemma
+    entry.analysis?.tokens?.forEach((token: any) => {
+      const word = token.normal || token.text.toLowerCase();
+      // Filter out small words/punctuation if needed
+      if (word.length > 3) {
+        wordCounts[word] = (wordCounts[word] || 0) + 1;
+      }
+    });
+  });
+
+  const sortedWords = Object.entries(wordCounts)
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, limit)
+    .map(([word, freq], i) => ({
+      word,
+      frequency: freq,
+      color: [
+        "bg-indigo-500",
+        "bg-purple-500",
+        "bg-pink-500",
+        "bg-blue-500",
+        "bg-emerald-500",
+      ][i % 5],
+    }));
+
+  // Fallback to dummy data if no entries
+  const words = sortedWords.length > 0 ? sortedWords : Array.from({ length: limit }, (_, i) => ({
     word: [
-      "write",
-      "learn",
-      "study",
-      "practice",
-      "improve",
-      "language",
-      "fluent",
-      "vocab",
-      "grammar",
-      "speak",
-      "read",
-      "understand",
-      "express",
-      "daily",
-      "progress",
+      "write", "learn", "study", "practice", "improve",
+      "language", "fluent", "vocab", "grammar", "speak",
+      "read", "understand", "express", "daily", "progress",
     ][i],
     frequency: Math.floor(Math.random() * 100) + 20,
     color: [
-      "bg-indigo-500",
-      "bg-purple-500",
-      "bg-pink-500",
-      "bg-blue-500",
-      "bg-emerald-500",
+      "bg-indigo-500", "bg-purple-500", "bg-pink-500", "bg-blue-500", "bg-emerald-500",
     ][i % 5],
   })).sort((a, b) => b.frequency - a.frequency);
 
@@ -591,11 +455,22 @@ const LearningVelocity = () => {
   );
 };
 
+import { Navbar } from "@/components/common/Navbar";
+
 const StatisticsPage = () => {
   const t = useTranslations('Statistics.header');
+  const { entries } = usePersistenceStore();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null; // Prevent hydration mismatch
+
   return (
     <div className="min-h-screen bg-slate-50">
-      <StatsNavigation />
+      <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
@@ -607,19 +482,39 @@ const StatisticsPage = () => {
           </p>
         </div>
 
-        <div className="space-y-6">
-          <QuickStats />
+        {/* Bento Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-min">
 
-          <WritingHeatmap />
-
-          <div className="grid lg:grid-cols-2 gap-6">
-            <VocabularyChart />
-            <LevelProgress />
+          {/* Quick Stats - Spans full width */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-4">
+            <QuickStats entries={entries} />
           </div>
 
-          <WordBubbles />
+          {/* Heatmap - Spans 2 cols */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-2">
+            <WritingHeatmap entries={entries} />
+          </div>
 
-          <LearningVelocity />
+          {/* Level Progress - Spans 1 col */}
+          <div className="col-span-1 lg:col-span-1">
+            <LevelProgress entries={entries} />
+          </div>
+
+          {/* Vocabulary Chart - Spans 1 col */}
+          <div className="col-span-1 lg:col-span-1">
+            <VocabularyChart entries={entries} />
+          </div>
+
+          {/* Word Bubbles - Spans 2 cols */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-2">
+            <WordBubbles entries={entries} />
+          </div>
+
+          {/* Learning Velocity - Spans 2 cols */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-2">
+            <LearningVelocity />
+          </div>
+
         </div>
       </div>
     </div>
