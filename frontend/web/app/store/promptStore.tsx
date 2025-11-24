@@ -18,6 +18,7 @@ type RequestState = "idle" | "loading" | "ready";
 interface PromptStore {
   allPrompts: Prompt[];
   currentPrompt: Prompt | null;
+  selectedPrompts: Prompt[]; // New: For multi-select UI
 
   languageCode: string;
   category: string;
@@ -33,7 +34,9 @@ interface PromptStore {
   requestState: RequestState;
 
   loadPrompts: () => void;
-  randomizePrompt: () => void;
+  randomizePrompt: () => void; // Updates selectedPrompts
+  generatePrompt: () => void; // Commits selectedPrompts to currentPrompt
+  setSelectedPrompts: (prompts: Prompt[]) => void;
 
   setLanguage: (lang: string) => void;
   setCategory: (c: string) => void;
@@ -70,6 +73,7 @@ export const usePromptStore = create<PromptStore>()(
     (set, get) => ({
       allPrompts: [],
       currentPrompt: null,
+      selectedPrompts: [],
 
       languageCode: "en",
       category: "writing",
@@ -154,7 +158,7 @@ export const usePromptStore = create<PromptStore>()(
           );
           const randomPrompt =
             allPrompts[Math.floor(Math.random() * allPrompts.length)];
-          set({ currentPrompt: randomPrompt, requestState: "ready" });
+          set({ selectedPrompts: [randomPrompt], requestState: "ready" });
           return;
         }
 
@@ -167,8 +171,8 @@ export const usePromptStore = create<PromptStore>()(
             p.topic === req.topic
               ? 1.0
               : sharedCategory(p.topic, req.topic)
-              ? 0.5
-              : 0.2;
+                ? 0.5
+                : 0.2;
 
           const profScore = proficiencyScore(p.proficiency, req.proficiency);
 
@@ -197,8 +201,8 @@ export const usePromptStore = create<PromptStore>()(
             averageRecentScore > 85 && profScore === 0.8
               ? ADAPTIVE_DIFFICULTY_BONUS
               : averageRecentScore < 60 && profScore === 0.6
-              ? ADAPTIVE_DIFFICULTY_BONUS
-              : 1.0;
+                ? ADAPTIVE_DIFFICULTY_BONUS
+                : 1.0;
 
           const finalScore =
             baseScore *
@@ -223,8 +227,20 @@ export const usePromptStore = create<PromptStore>()(
           SELECTION_TEMPERATURE
         );
 
-        set({ currentPrompt: picked, requestState: "ready" });
+        // Update selectedPrompts instead of currentPrompt
+        set({ selectedPrompts: [picked], requestState: "ready" });
       },
+
+      generatePrompt: () => {
+        const { selectedPrompts } = get();
+        if (selectedPrompts.length > 0) {
+          // For now, if multiple are selected, just pick the first one or handle merge logic later
+          // The prompt card currently displays one prompt
+          set({ currentPrompt: selectedPrompts[0] });
+        }
+      },
+
+      setSelectedPrompts: (prompts) => set({ selectedPrompts: prompts }),
 
       setLanguage: (languageCode) => set({ languageCode }),
       setCategory: (category) => set({ category }),
@@ -271,6 +287,7 @@ export const usePromptStore = create<PromptStore>()(
         strugglingTopics: state.strugglingTopics,
         masteredTopics: state.masteredTopics,
         averageRecentScore: state.averageRecentScore,
+        // Don't persist selectedPrompts to avoid stale UI state on reload
       }),
     }
   )

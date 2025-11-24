@@ -1,14 +1,15 @@
 "use client";
+import React from "react";
 import { useTempAnStore } from "@/app/store/TempAnStore";
 import { useWritingPadStore } from "@/app/store/WritingStore";
-import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import { LLMInsightsPanel } from "./LLMInsightsPanel";
 
 export const InsightsPanel = () => {
-  const { text, wordCount, charCount, sentenceCount, setText } =
-    useWritingPadStore();
-  const { savedText } = useTempAnStore();
   const t = useTranslations('Writing.insights');
+  const { savedText, analysisResult } = useTempAnStore();
+  const { wordCount, charCount } = useWritingPadStore();
+
   const uniqueWords = new Set(
     savedText
       .toLowerCase()
@@ -104,7 +105,7 @@ export const InsightsPanel = () => {
               </svg>
             }
             label={t('complexity')}
-            value="B2"
+            value={analysisResult?.cefrLevel || "—"}
             subtext={t('complexityLevel')}
             positive={undefined}
           />
