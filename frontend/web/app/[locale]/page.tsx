@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslations } from 'next-intl';
 
 const DesignSystem = () => {
   return (
@@ -63,6 +64,7 @@ const DesignSystem = () => {
 };
 
 const Navigation = () => {
+  const t = useTranslations('Navigation');
   return (
     <nav className="border-b border-slate-200 bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,34 +81,34 @@ const Navigation = () => {
               href="#features"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              Features
+              {t('features')}
             </a>
             <a
               href="#pricing"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              Pricing
+              {t('pricing')}
             </a>
             <a
               href="#teachers"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              For Teachers
+              {t('teachers')}
             </a>
             <a
               href="#about"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              About
+              {t('about')}
             </a>
           </div>
 
           <div className="flex items-center space-x-4">
             <button className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
-              Sign In
+              {t('signIn')}
             </button>
             <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
-              Start Writing
+              {t('startWriting')}
             </button>
           </div>
         </div>
@@ -116,6 +118,7 @@ const Navigation = () => {
 };
 
 const HeroSection = () => {
+  const t = useTranslations('Hero');
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-white to-white">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
@@ -124,29 +127,27 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
-            <span>AI-Powered Language Learning</span>
+            <span>{t('badge')}</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-normal">
-            Master Languages Through
+            {t('title')}
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-800 p-2">
               {" "}
-              Daily Writing Practice
+              {t('titleHighlight')}
             </span>
           </h1>
 
           <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Write daily, receive instant AI feedback, and build vocabulary
-            naturally. LangScribe helps you achieve fluency through contextual
-            learning and spaced repetition.
+            {t('description')}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <button className="px-8 py-4 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              Start Writing!
+              {t('ctaStart')}
             </button>
             <button className="px-8 py-4 bg-white text-slate-700 rounded-xl hover:bg-slate-50 transition-all font-semibold text-lg border-2 border-slate-200">
-              Watch Demo
+              {t('ctaDemo')}
             </button>
           </div>
 
@@ -163,7 +164,7 @@ const HeroSection = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>No credit card required</span>
+              <span>{t('noCreditCard')}</span>
             </div>
           </div>
         </div>
@@ -181,14 +182,14 @@ const HeroSection = () => {
             <div className="p-8 bg-gradient-to-br from-slate-50 to-indigo-50">
               <div className="bg-white rounded-lg p-6 shadow-sm mb-4 border border-indigo-100">
                 <div className="text-sm text-indigo-600 font-medium mb-2">
-                  Today's Prompt
+                  {t('todaysPrompt')}
                 </div>
                 <div className="text-lg text-slate-900">
-                  Describe your perfect weekend morning...
+                  {t('promptExample')}
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm min-h-48 text-slate-400">
-                Start writing here...
+                {t('inputPlaceholder')}
               </div>
             </div>
           </div>
@@ -199,6 +200,7 @@ const HeroSection = () => {
 };
 
 const FeaturesSection = () => {
+  const t = useTranslations('Features');
   const features = [
     {
       icon: (
@@ -216,9 +218,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "Daily Writing Prompts",
-      description:
-        "Adaptive prompts tailored to your proficiency level, keeping practice engaging and relevant.",
+      title: t('items.prompts.title'),
+      description: t('items.prompts.description'),
     },
     {
       icon: (
@@ -236,9 +237,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "AI-Powered Feedback",
-      description:
-        "Instant corrections for grammar, vocabulary suggestions, and fluency scoring to accelerate learning.",
+      title: t('items.feedback.title'),
+      description: t('items.feedback.description'),
     },
     {
       icon: (
@@ -256,9 +256,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "Spaced Repetition SRS",
-      description:
-        "Build lasting vocabulary with flashcards generated from your writing, optimized for retention.",
+      title: t('items.srs.title'),
+      description: t('items.srs.description'),
     },
     {
       icon: (
@@ -276,9 +275,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "Progress Analytics",
-      description:
-        "Track your vocabulary growth, writing streaks, and fluency improvements with detailed insights.",
+      title: t('items.analytics.title'),
+      description: t('items.analytics.description'),
     },
     {
       icon: (
@@ -296,9 +294,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "Teacher Dashboard",
-      description:
-        "Classroom management, assignment tracking, and rubric-based grading for educators and institutions.",
+      title: t('items.dashboard.title'),
+      description: t('items.dashboard.description'),
     },
     {
       icon: (
@@ -316,9 +313,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: "Multi-Language Support",
-      description:
-        "Practice in English, Spanish, French, German, and more languages with CEFR-aligned content.",
+      title: t('items.multiLanguage.title'),
+      description: t('items.multiLanguage.description'),
     },
   ];
 
@@ -327,11 +323,10 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Everything You Need to Master a Language
+            {t('title')}
           </h2>
           <p className="text-lg text-slate-600">
-            A comprehensive platform designed around the science of language
-            acquisition
+            {t('subtitle')}
           </p>
         </div>
 
@@ -384,6 +379,7 @@ const FeaturesSection = () => {
 // };
 
 const Footer = () => {
+  const t = useTranslations('Footer');
   return (
     <footer className="bg-slate-900 text-slate-300 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -396,79 +392,78 @@ const Footer = () => {
               <span className="text-xl font-bold text-white">LangScribe</span>
             </div>
             <p className="text-sm text-slate-400">
-              Master languages through daily writing practice and AI-powered
-              feedback.
+              {t('description')}
             </p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Product</h3>
+            <h3 className="font-semibold text-white mb-4">{t('product')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Features
+                  {t('links.features')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Pricing
+                  {t('links.pricing')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  For Teachers
+                  {t('links.teachers')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  API
+                  {t('links.api')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Company</h3>
+            <h3 className="font-semibold text-white mb-4">{t('company')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  About
+                  {t('links.about')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Blog
+                  {t('links.blog')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Careers
+                  {t('links.careers')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Contact
+                  {t('links.contact')}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">Legal</h3>
+            <h3 className="font-semibold text-white mb-4">{t('legal')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Privacy
+                  {t('links.privacy')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Terms
+                  {t('links.terms')}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  Security
+                  {t('links.security')}
                 </a>
               </li>
             </ul>
@@ -476,7 +471,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-sm text-slate-400 text-center">
-          © 2025 LangScribe. All rights reserved.
+          {t('copyright')}
         </div>
       </div>
     </footer>

@@ -1,5 +1,6 @@
 import { UIPromptCardProps } from "@/app/types/promptTypes";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 export const PromptCard: React.FC<UIPromptCardProps> = ({
   prompt = "",
@@ -7,6 +8,7 @@ export const PromptCard: React.FC<UIPromptCardProps> = ({
   topic = "",
   onRandom,
 }) => {
+  const t = useTranslations('Writing.prompt');
   return (
     <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 border border-indigo-100 shadow-sm">
       <div className="flex items-start justify-between mb-4">
@@ -42,7 +44,7 @@ export const PromptCard: React.FC<UIPromptCardProps> = ({
 
       <div className="space-y-3">
         <h2 className="text-sm font-medium text-indigo-600 uppercase tracking-wide">
-          Today's Writing Prompt
+          {t('title')}
         </h2>
         <p className="text-2xl font-semibold text-slate-900 leading-relaxed">
           {prompt}
@@ -64,7 +66,7 @@ export const PromptCard: React.FC<UIPromptCardProps> = ({
               d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <span>Suggested: 200-300 words</span>
+          <span>{t('suggested')}</span>
         </div>
       </div>
     </div>

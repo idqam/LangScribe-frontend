@@ -1,0 +1,151 @@
+{
+    "Navigation": {
+        "features": "Características",
+        "pricing": "Precios",
+        "teachers": "Para Maestros",
+        "about": "Acerca de",
+        "signIn": "Iniciar Sesión",
+        "startWriting": "Empezar a Escribir"
+    },
+    "Hero": {
+        "badge": "Aprendizaje de Idiomas con IA",
+        "title": "Domina Idiomas A Través de",
+        "titleHighlight": "Práctica Diaria de Escritura",
+        "description": "Escribe diariamente, recibe retroalimentación instantánea de IA y construye vocabulario naturalmente. LangScribe te ayuda a lograr fluidez a través del aprendizaje contextual y la repetición espaciada.",
+        "ctaStart": "¡Empieza a Escribir!",
+        "ctaDemo": "Ver Demo",
+        "noCreditCard": "No se requiere tarjeta de crédito",
+        "todaysPrompt": "Tema de Hoy",
+        "promptExample": "Describe tu mañana perfecta de fin de semana...",
+        "inputPlaceholder": "Empieza a escribir aquí..."
+    },
+    "Features": {
+        "title": "Todo lo que Necesitas para Dominar un Idioma",
+        "subtitle": "Una plataforma integral diseñada en torno a la ciencia de la adquisición del lenguaje",
+        "items": {
+            "prompts": {
+                "title": "Temas de Escritura Diarios",
+                "description": "Temas adaptativos ajustados a tu nivel de competencia, manteniendo la práctica atractiva y relevante."
+            },
+            "feedback": {
+                "title": "Retroalimentación con IA",
+                "description": "Correcciones instantáneas de gramática, sugerencias de vocabulario y puntuación de fluidez para acelerar el aprendizaje."
+            },
+            "srs": {
+                "title": "Repetición Espaciada SRS",
+                "description": "Construye vocabulario duradero con tarjetas generadas a partir de tu escritura, optimizadas para la retención."
+            },
+            "analytics": {
+                "title": "Analíticas de Progreso",
+                "description": "Rastrea tu crecimiento de vocabulario, rachas de escritura y mejoras de fluidez con información detallada."
+            },
+            "dashboard": {
+                "title": "Panel de Maestros",
+                "description": "Gestión de aulas, seguimiento de tareas y calificación basada en rúbricas para educadores e instituciones."
+            },
+            "multiLanguage": {
+                "title": "Soporte Multi-Idioma",
+                "description": "Practica en inglés, español, francés, alemán y más idiomas con contenido alineado al MCER."
+            }
+        }
+    },
+    "Footer": {
+        "description": "Domina idiomas a través de la práctica diaria de escritura y retroalimentación con IA.",
+        "product": "Producto",
+        "company": "Compañía",
+        "legal": "Legal",
+        "links": {
+            "features": "Características",
+            "pricing": "Precios",
+            "teachers": "Para Maestros",
+            "api": "API",
+            "about": "Acerca de",
+            "blog": "Blog",
+            "careers": "Carreras",
+            "contact": "Contacto",
+            "privacy": "Privacidad",
+            "terms": "Términos",
+            "security": "Seguridad"
+        },
+        "copyright": "© 2025 LangScribe. Todos los derechos reservados."
+    },
+    "Writing": {
+        "nav": {
+            "write": "Escribir",
+            "review": "Revisar",
+            "statistics": "Estadísticas",
+            "streak": "Racha de {days} días"
+        },
+        "pad": {
+            "placeholder": "Empieza a escribir tu respuesta aquí...",
+            "autoSaved": "Autoguardado justo ahora",
+            "log": "¡Registrar!"
+        },
+        "insights": {
+            "title": "Ideas de Escritura",
+            "words": "Palabras",
+            "wordsTarget": "Meta: 200-300",
+            "uniqueWords": "Palabras Únicas",
+            "complexity": "Complejidad",
+            "complexityLevel": "Avanzado",
+            "timeWriting": "Tiempo Escribiendo",
+            "timeSession": "Esta sesión",
+            "generate": "Generar Ideas con IA",
+            "quickTip": "Consejo Rápido",
+            "tipContent": "Intenta usar adjetivos más descriptivos para mejorar tu escritura. Considera palabras como \"vibrante\", \"sereno\" o \"bullicioso\".",
+            "recentProgress": "Progreso Reciente",
+            "wordsCount": "{count} palabras"
+        },
+        "prompt": {
+            "title": "Tema de Escritura de Hoy",
+            "suggested": "Sugerido: 200-300 palabras",
+            "noPrompt": "No hay tema disponible"
+        }
+    },
+    "Statistics": {
+        "header": {
+            "title": "Tu Panel de Progreso",
+            "subtitle": "Información completa sobre tu viaje de aprendizaje"
+        },
+        "quickStats": {
+            "streak": "Racha Actual",
+            "entries": "Entradas Totales",
+            "words": "Palabras Dominadas",
+            "quality": "Calidad Promedio"
+        },
+        "heatmap": {
+            "title": "Actividad de Escritura",
+            "subtitle": "Tu consistencia a lo largo del tiempo",
+            "weekly": "Semanal",
+            "monthly": "Mensual",
+            "less": "Menos",
+            "more": "Más",
+            "total": "Total: {count} palabras"
+        },
+        "vocabulary": {
+            "title": "Palabras Comunes vs Nuevas",
+            "subtitle": "Balance de vocabulario esta semana",
+            "common": "Palabras Comunes",
+            "new": "Palabras Nuevas"
+        },
+        "level": {
+            "title": "Progreso MCER",
+            "subtitle": "Tu viaje hacia la fluidez",
+            "current": "Nivel Actual"
+        },
+        "bubbles": {
+            "title": "Palabras Más Usadas",
+            "subtitle": "Tus patrones de vocabulario"
+        },
+        "velocity": {
+            "title": "Velocidad de Aprendizaje",
+            "subtitle": "Nuevas palabras aprendidas por semana",
+            "total": "Palabras Totales",
+            "retention": "Retención Promedio",
+            "rate": "Palabras/Semana"
+        }
+    },
+    "Auth": {
+        "title": "LangScribe"
+    }
+}

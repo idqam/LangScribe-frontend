@@ -1,8 +1,8 @@
 "use client";
 
 import React, { ReactNode, useMemo } from "react";
-import promptsData from "../data/promptsData";
-import { usePromptStore } from "../store/promptStore";
+import promptsData from "@/app/data/promptsData";
+import { usePromptStore } from "@/app/store/promptStore";
 
 export const PromptControls: React.FC = () => {
   const {

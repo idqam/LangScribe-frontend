@@ -2,11 +2,13 @@
 import { useTempAnStore } from "@/app/store/TempAnStore";
 import { useWritingPadStore } from "@/app/store/WritingStore";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export const InsightsPanel = () => {
   const { text, wordCount, charCount, sentenceCount, setText } =
     useWritingPadStore();
   const { savedText } = useTempAnStore();
+  const t = useTranslations('Writing.insights');
   const uniqueWords = new Set(
     savedText
       .toLowerCase()
@@ -20,7 +22,7 @@ export const InsightsPanel = () => {
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-lg font-semibold text-slate-900">
-            Writing Insights
+            {t('title')}
           </h3>
           <button className="text-slate-400 hover:text-slate-600 transition-colors">
             <svg
@@ -56,9 +58,9 @@ export const InsightsPanel = () => {
                 />
               </svg>
             }
-            label="Words"
+            label={t('words')}
             value={wordCount}
-            subtext="Target: 200-300"
+            subtext={t('wordsTarget')}
             positive={undefined}
           />
 
@@ -78,7 +80,7 @@ export const InsightsPanel = () => {
                 />
               </svg>
             }
-            label="Unique Words"
+            label={t('uniqueWords')}
             value={uniqueWords}
             subtext={""}
             // subtext="+8 from last entry"
@@ -101,9 +103,9 @@ export const InsightsPanel = () => {
                 />
               </svg>
             }
-            label="Complexity"
+            label={t('complexity')}
             value="B2"
-            subtext="Advanced"
+            subtext={t('complexityLevel')}
             positive={undefined}
           />
 
@@ -123,9 +125,9 @@ export const InsightsPanel = () => {
                 />
               </svg>
             }
-            label="Time Writing"
+            label={t('timeWriting')}
             value="12m"
-            subtext="This session"
+            subtext={t('timeSession')}
             positive={undefined}
           />
         </div>
@@ -144,7 +146,7 @@ export const InsightsPanel = () => {
               d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
             />
           </svg>
-          Generate AI Insights
+          {t('generate')}
         </button>
       </div>
 
@@ -166,17 +168,16 @@ export const InsightsPanel = () => {
             </svg>
           </div>
           <div className="flex-1">
-            <h4 className="font-semibold text-slate-900 mb-1">Quick Tip</h4>
+            <h4 className="font-semibold text-slate-900 mb-1">{t('quickTip')}</h4>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Try using more descriptive adjectives to enhance your writing.
-              Consider words like "vibrant," "serene," or "bustling."
+              {t('tipContent')}
             </p>
           </div>
         </div>
       </div>
 
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <h4 className="font-semibold text-slate-900 mb-4">Recent Progress</h4>
+        <h4 className="font-semibold text-slate-900 mb-4">{t('recentProgress')}</h4>
         <div className="space-y-3">
           <ProgressItem date="Yesterday" words="245" score="88" />
           <ProgressItem date="2 days ago" words="198" score="82" />
@@ -198,9 +199,8 @@ export const StatItem = ({ icon, label, value, subtext, positive }) => {
         <div className="font-semibold text-slate-900 text-lg">{value}</div>
       </div>
       <div
-        className={`text-xs ${
-          positive ? "text-emerald-600" : "text-slate-500"
-        }`}
+        className={`text-xs ${positive ? "text-emerald-600" : "text-slate-500"
+          }`}
       >
         {subtext}
       </div>

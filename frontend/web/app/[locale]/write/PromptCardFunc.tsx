@@ -2,10 +2,12 @@
 
 import { useEffect } from "react";
 import { PromptCard } from "@/components/writing/PromptCard";
-import { usePromptStore } from "../store/promptStore";
+import { usePromptStore } from "@/app/store/promptStore";
 import { PromptControls } from "./PromptCardControls";
+import { useTranslations } from "next-intl";
 
 export const PromptCardFunc: React.FC = () => {
+  const t = useTranslations('Writing.prompt');
   const {
     currentPrompt,
     loadPrompts,
@@ -30,7 +32,7 @@ export const PromptCardFunc: React.FC = () => {
       <PromptControls />
 
       <PromptCard
-        prompt={currentPrompt?.prompt ?? "No prompt available"}
+        prompt={currentPrompt?.prompt ?? t('noPrompt')}
         level={currentPrompt?.proficiency ?? ""}
         topic={currentPrompt?.topic ?? "general"}
         onRandom={() => randomizePrompt()}

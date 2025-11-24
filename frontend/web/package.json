@@ -25,6 +25,7 @@
     "lucide-react": "^0.303.0",
     "natural": "^8.1.0",
     "next": "14.0.0",
+    "next-intl": "^4.5.5",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.0",

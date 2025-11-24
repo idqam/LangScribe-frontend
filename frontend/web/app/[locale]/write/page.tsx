@@ -1,10 +1,12 @@
 import React from "react";
+import { useTranslations } from 'next-intl';
 import { PromptCard } from "@/components/writing/PromptCard";
 import { PromptCardFunc } from "./PromptCardFunc";
 import { WritingPad } from "@/components/writing/WritingPad";
 import { InsightsPanel } from "@/components/analytics/InsightsPanel";
 
 const WritingNavigation = () => {
+  const t = useTranslations('Writing.nav');
   return (
     <nav className="border-b border-slate-200 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,19 +23,19 @@ const WritingNavigation = () => {
 
             <div className="hidden md:flex items-center space-x-6">
               <a href="#" className="text-indigo-600 font-medium">
-                Write
+                {t('write')}
               </a>
               <a
                 href="#"
                 className="text-slate-600 hover:text-slate-900 transition-colors"
               >
-                Review
+                {t('review')}
               </a>
               <a
                 href="#"
                 className="text-slate-600 hover:text-slate-900 transition-colors"
               >
-                Statistics
+                {t('statistics')}
               </a>
             </div>
           </div>
@@ -47,7 +49,7 @@ const WritingNavigation = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>7 day streak</span>
+              <span>{t('streak', { days: 7 })}</span>
             </div>
 
             <button className="w-10 h-10 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center font-semibold hover:bg-indigo-200 transition-colors">

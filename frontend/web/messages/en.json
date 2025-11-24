@@ -1,0 +1,151 @@
+{
+    "Navigation": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "teachers": "For Teachers",
+        "about": "About",
+        "signIn": "Sign In",
+        "startWriting": "Start Writing"
+    },
+    "Hero": {
+        "badge": "AI-Powered Language Learning",
+        "title": "Master Languages Through",
+        "titleHighlight": "Daily Writing Practice",
+        "description": "Write daily, receive instant AI feedback, and build vocabulary naturally. LangScribe helps you achieve fluency through contextual learning and spaced repetition.",
+        "ctaStart": "Start Writing!",
+        "ctaDemo": "Watch Demo",
+        "noCreditCard": "No credit card required",
+        "todaysPrompt": "Today's Prompt",
+        "promptExample": "Describe your perfect weekend morning...",
+        "inputPlaceholder": "Start writing here..."
+    },
+    "Features": {
+        "title": "Everything You Need to Master a Language",
+        "subtitle": "A comprehensive platform designed around the science of language acquisition",
+        "items": {
+            "prompts": {
+                "title": "Daily Writing Prompts",
+                "description": "Adaptive prompts tailored to your proficiency level, keeping practice engaging and relevant."
+            },
+            "feedback": {
+                "title": "AI-Powered Feedback",
+                "description": "Instant corrections for grammar, vocabulary suggestions, and fluency scoring to accelerate learning."
+            },
+            "srs": {
+                "title": "Spaced Repetition SRS",
+                "description": "Build lasting vocabulary with flashcards generated from your writing, optimized for retention."
+            },
+            "analytics": {
+                "title": "Progress Analytics",
+                "description": "Track your vocabulary growth, writing streaks, and fluency improvements with detailed insights."
+            },
+            "dashboard": {
+                "title": "Teacher Dashboard",
+                "description": "Classroom management, assignment tracking, and rubric-based grading for educators and institutions."
+            },
+            "multiLanguage": {
+                "title": "Multi-Language Support",
+                "description": "Practice in English, Spanish, French, German, and more languages with CEFR-aligned content."
+            }
+        }
+    },
+    "Footer": {
+        "description": "Master languages through daily writing practice and AI-powered feedback.",
+        "product": "Product",
+        "company": "Company",
+        "legal": "Legal",
+        "links": {
+            "features": "Features",
+            "pricing": "Pricing",
+            "teachers": "For Teachers",
+            "api": "API",
+            "about": "About",
+            "blog": "Blog",
+            "careers": "Careers",
+            "contact": "Contact",
+            "privacy": "Privacy",
+            "terms": "Terms",
+            "security": "Security"
+        },
+        "copyright": "© 2025 LangScribe. All rights reserved."
+    },
+    "Writing": {
+        "nav": {
+            "write": "Write",
+            "review": "Review",
+            "statistics": "Statistics",
+            "streak": "{days} day streak"
+        },
+        "pad": {
+            "placeholder": "Start writing your response here...",
+            "autoSaved": "Auto-saved just now",
+            "log": "Log!"
+        },
+        "insights": {
+            "title": "Writing Insights",
+            "words": "Words",
+            "wordsTarget": "Target: 200-300",
+            "uniqueWords": "Unique Words",
+            "complexity": "Complexity",
+            "complexityLevel": "Advanced",
+            "timeWriting": "Time Writing",
+            "timeSession": "This session",
+            "generate": "Generate AI Insights",
+            "quickTip": "Quick Tip",
+            "tipContent": "Try using more descriptive adjectives to enhance your writing. Consider words like \"vibrant,\" \"serene,\" or \"bustling.\"",
+            "recentProgress": "Recent Progress",
+            "wordsCount": "{count} words"
+        },
+        "prompt": {
+            "title": "Today's Writing Prompt",
+            "suggested": "Suggested: 200-300 words",
+            "noPrompt": "No prompt available"
+        }
+    },
+    "Statistics": {
+        "header": {
+            "title": "Your Progress Dashboard",
+            "subtitle": "Comprehensive insights into your learning journey"
+        },
+        "quickStats": {
+            "streak": "Current Streak",
+            "entries": "Total Entries",
+            "words": "Words Mastered",
+            "quality": "Avg Quality"
+        },
+        "heatmap": {
+            "title": "Writing Activity",
+            "subtitle": "Your consistency over time",
+            "weekly": "Weekly",
+            "monthly": "Monthly",
+            "less": "Less",
+            "more": "More",
+            "total": "Total: {count} words"
+        },
+        "vocabulary": {
+            "title": "Common vs New Words",
+            "subtitle": "Vocabulary balance this week",
+            "common": "Common Words",
+            "new": "New Words"
+        },
+        "level": {
+            "title": "CEFR Progress",
+            "subtitle": "Your journey to fluency",
+            "current": "Current Level"
+        },
+        "bubbles": {
+            "title": "Most Used Words",
+            "subtitle": "Your vocabulary patterns"
+        },
+        "velocity": {
+            "title": "Learning Velocity",
+            "subtitle": "New words learned per week",
+            "total": "Total Words",
+            "retention": "Avg Retention",
+            "rate": "Words/Week"
+        }
+    },
+    "Auth": {
+        "title": "LangScribe"
+    }
+}
