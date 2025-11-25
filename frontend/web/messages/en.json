@@ -5,7 +5,8 @@
         "teachers": "For Teachers",
         "about": "About",
         "signIn": "Sign In",
-        "startWriting": "Start Writing"
+        "startWriting": "Start Writing",
+        "registerHero": "Register"
     },
     "Hero": {
         "badge": "AI-Powered Language Learning",

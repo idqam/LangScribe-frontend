@@ -5,7 +5,8 @@
         "teachers": "Para Maestros",
         "about": "Acerca de",
         "signIn": "Iniciar Sesión",
-        "startWriting": "Empezar a Escribir"
+        "startWriting": "Empezar a Escribir",
+        "registerHero": "Registrarse"
     },
     "Hero": {
         "badge": "Aprendizaje de Idiomas con IA",

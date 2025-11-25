@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from 'next-intl';
+import { SignInButton } from "@/components/general/SignInButton";
 
 const DesignSystem = () => {
   return (
@@ -104,11 +105,9 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <button className="text-slate-600 hover:text-slate-900 font-medium transition-colors">
-              {t('signIn')}
-            </button>
+            <SignInButton />
             <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
-              {t('startWriting')}
+              {t('registerHero')}
             </button>
           </div>
         </div>
