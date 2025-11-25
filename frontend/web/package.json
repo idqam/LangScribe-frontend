@@ -28,6 +28,7 @@
     "natural": "^8.1.0",
     "next": "14.0.0",
     "next-intl": "^4.5.5",
+    "openai": "^6.9.1",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.0",

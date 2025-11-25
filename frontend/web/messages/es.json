@@ -71,6 +71,10 @@
         "copyright": "© 2025 LangScribe. Todos los derechos reservados."
     },
     "Writing": {
+        "controls": {
+            "logButton": "Log Entry",
+            "logSuccess": "Entry logged successfully!"
+        },
         "nav": {
             "write": "Escribir",
             "review": "Revisar",
@@ -91,7 +95,7 @@
             "complexityLevel": "Avanzado",
             "timeWriting": "Tiempo Escribiendo",
             "timeSession": "Esta sesión",
-            "generate": "Generar Ideas con IA",
+            "generate": "Generar Información con IA",
             "quickTip": "Consejo Rápido",
             "tipContent": "Intenta usar adjetivos más descriptivos para mejorar tu escritura. Considera palabras como \"vibrante\", \"sereno\" o \"bullicioso\".",
             "recentProgress": "Progreso Reciente",

@@ -3,10 +3,11 @@ import { usePersistenceStore } from "@/app/store/PersistenceStore";
 import { analyzeText } from "@/lib/nlp/analyze";
 import { useTranslations } from "next-intl";
 import { useTempAnStore } from "@/app/store/TempAnStore";
-import React from "react";
+import React, { useState } from "react";
 import { useVocabStore } from "@/app/store/VocabStore";
 import { toast } from "sonner";
 import commonWords from "@/app/data/commonWords.json";
+import { useInsightsStore } from "@/app/store/InsightsStore";
 
 export const LogButton = () => {
   const t = useTranslations('Writing.controls');
@@ -14,8 +15,10 @@ export const LogButton = () => {
   const { setSavedText, setAnalysisResult } = useTempAnStore();
   const { addEntry } = usePersistenceStore();
   const { addCard } = useVocabStore();
+  const { setInsight, setLoading, setError } = useInsightsStore();
+  const [isGeneratingInsights, setIsGeneratingInsights] = useState(false);
 
-  const handleLog = () => {
+  const handleLog = async () => {
     if (!text.trim()) {
       toast.error("Please write something first!");
       return;
@@ -73,19 +76,45 @@ export const LogButton = () => {
     } else {
       toast.success(t('logSuccess'));
     }
+
+    // --- Generate AI Insights ---
+    setIsGeneratingInsights(true);
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/insights', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to generate insights');
+      }
+
+      const insights = await response.json();
+      setInsight(insights);
+      toast.success('AI insights generated!');
+    } catch (error) {
+      console.error('Failed to generate insights:', error);
+      setError('Failed to generate insights');
+      toast.error('Failed to generate AI insights');
+    } finally {
+      setIsGeneratingInsights(false);
+      setLoading(false);
+    }
   };
+
 
   return (
     <button
       onClick={handleLog}
       className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0"
     >
-      {t('log')}
+      {t('logButton')}
     </button>
   );
 };
 
-export const AnalyzeButton = () => {
-  const { savedText } = useTempAnStore();
-
-};

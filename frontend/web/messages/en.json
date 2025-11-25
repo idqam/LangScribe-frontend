@@ -71,6 +71,10 @@
         "copyright": "© 2025 LangScribe. All rights reserved."
     },
     "Writing": {
+        "controls": {
+            "logButton": "Log Entry",
+            "logSuccess": "Entry logged successfully!"
+        },
         "nav": {
             "write": "Write",
             "review": "Review",
