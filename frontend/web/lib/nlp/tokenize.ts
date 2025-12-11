@@ -5,6 +5,7 @@ import nlpEs from 'es-compromise';
 nlp.plugin(nlpEs);
 
 export interface Token {
+    pos: string;
     text: string;
     normal: string;
     tags: string[];
