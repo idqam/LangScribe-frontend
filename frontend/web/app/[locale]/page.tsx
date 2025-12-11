@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import { SignInButton } from "@/components/general/SignInButton";
 
 const DesignSystem = () => {
@@ -65,7 +65,7 @@ const DesignSystem = () => {
 };
 
 const Navigation = () => {
-  const t = useTranslations('Navigation');
+  const t = useTranslations("Navigation");
   return (
     <nav className="border-b border-slate-200 bg-white sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,32 +82,32 @@ const Navigation = () => {
               href="#features"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              {t('features')}
+              {t("features")}
             </a>
             <a
               href="#pricing"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              {t('pricing')}
+              {t("pricing")}
             </a>
             <a
               href="#teachers"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              {t('teachers')}
+              {t("teachers")}
             </a>
             <a
               href="#about"
               className="text-slate-600 hover:text-slate-900 transition-colors"
             >
-              {t('about')}
+              {t("about")}
             </a>
           </div>
 
           <div className="flex items-center space-x-4">
             <SignInButton />
             <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium">
-              {t('registerHero')}
+              {t("registerHero")}
             </button>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Navigation = () => {
 };
 
 const HeroSection = () => {
-  const t = useTranslations('Hero');
+  const t = useTranslations("Hero");
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-indigo-50 via-white to-white">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10"></div>
@@ -126,27 +126,27 @@ const HeroSection = () => {
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
-            <span>{t('badge')}</span>
+            <span>{t("badge")}</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 leading-normal">
-            {t('title')}
+            {t("title")}
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-indigo-800 p-2">
               {" "}
-              {t('titleHighlight')}
+              {t("titleHighlight")}
             </span>
           </h1>
 
           <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            {t('description')}
+            {t("description")}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <button className="px-8 py-4 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-              {t('ctaStart')}
+              {t("ctaStart")}
             </button>
             <button className="px-8 py-4 bg-white text-slate-700 rounded-xl hover:bg-slate-50 transition-all font-semibold text-lg border-2 border-slate-200">
-              {t('ctaDemo')}
+              {t("ctaDemo")}
             </button>
           </div>
 
@@ -163,7 +163,7 @@ const HeroSection = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>{t('noCreditCard')}</span>
+              <span>{t("noCreditCard")}</span>
             </div>
           </div>
         </div>
@@ -181,14 +181,14 @@ const HeroSection = () => {
             <div className="p-8 bg-gradient-to-br from-slate-50 to-indigo-50">
               <div className="bg-white rounded-lg p-6 shadow-sm mb-4 border border-indigo-100">
                 <div className="text-sm text-indigo-600 font-medium mb-2">
-                  {t('todaysPrompt')}
+                  {t("todaysPrompt")}
                 </div>
                 <div className="text-lg text-slate-900">
-                  {t('promptExample')}
+                  {t("promptExample")}
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm min-h-48 text-slate-400">
-                {t('inputPlaceholder')}
+                {t("inputPlaceholder")}
               </div>
             </div>
           </div>
@@ -199,7 +199,7 @@ const HeroSection = () => {
 };
 
 const FeaturesSection = () => {
-  const t = useTranslations('Features');
+  const t = useTranslations("Features");
   const features = [
     {
       icon: (
@@ -217,8 +217,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: t('items.prompts.title'),
-      description: t('items.prompts.description'),
+      title: t("items.prompts.title"),
+      description: t("items.prompts.description"),
     },
     {
       icon: (
@@ -236,8 +236,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: t('items.feedback.title'),
-      description: t('items.feedback.description'),
+      title: t("items.feedback.title"),
+      description: t("items.feedback.description"),
     },
     {
       icon: (
@@ -255,8 +255,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: t('items.srs.title'),
-      description: t('items.srs.description'),
+      title: t("items.srs.title"),
+      description: t("items.srs.description"),
     },
     {
       icon: (
@@ -274,8 +274,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: t('items.analytics.title'),
-      description: t('items.analytics.description'),
+      title: t("items.analytics.title"),
+      description: t("items.analytics.description"),
     },
     {
       icon: (
@@ -293,8 +293,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: t('items.dashboard.title'),
-      description: t('items.dashboard.description'),
+      title: t("items.dashboard.title"),
+      description: t("items.dashboard.description"),
     },
     {
       icon: (
@@ -312,8 +312,8 @@ const FeaturesSection = () => {
           />
         </svg>
       ),
-      title: t('items.multiLanguage.title'),
-      description: t('items.multiLanguage.description'),
+      title: t("items.multiLanguage.title"),
+      description: t("items.multiLanguage.description"),
     },
   ];
 
@@ -322,11 +322,9 @@ const FeaturesSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            {t('title')}
+            {t("title")}
           </h2>
-          <p className="text-lg text-slate-600">
-            {t('subtitle')}
-          </p>
+          <p className="text-lg text-slate-600">{t("subtitle")}</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -378,7 +376,7 @@ const FeaturesSection = () => {
 // };
 
 const Footer = () => {
-  const t = useTranslations('Footer');
+  const t = useTranslations("Footer");
   return (
     <footer className="bg-slate-900 text-slate-300 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -390,79 +388,77 @@ const Footer = () => {
               </div>
               <span className="text-xl font-bold text-white">LangScribe</span>
             </div>
-            <p className="text-sm text-slate-400">
-              {t('description')}
-            </p>
+            <p className="text-sm text-slate-400">{t("description")}</p>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">{t('product')}</h3>
+            <h3 className="font-semibold text-white mb-4">{t("product")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.features')}
+                  {t("links.features")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.pricing')}
+                  {t("links.pricing")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.teachers')}
+                  {t("links.teachers")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.api')}
+                  {t("links.api")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">{t('company')}</h3>
+            <h3 className="font-semibold text-white mb-4">{t("company")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.about')}
+                  {t("links.about")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.blog')}
+                  {t("links.blog")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.careers')}
+                  {t("links.careers")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.contact')}
+                  {t("links.contact")}
                 </a>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold text-white mb-4">{t('legal')}</h3>
+            <h3 className="font-semibold text-white mb-4">{t("legal")}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.privacy')}
+                  {t("links.privacy")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.terms')}
+                  {t("links.terms")}
                 </a>
               </li>
               <li>
                 <a href="#" className="hover:text-white transition-colors">
-                  {t('links.security')}
+                  {t("links.security")}
                 </a>
               </li>
             </ul>
@@ -470,14 +466,14 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-slate-800 pt-8 text-sm text-slate-400 text-center">
-          {t('copyright')}
+          {t("copyright")}
         </div>
       </div>
     </footer>
   );
 };
 
-const Home = () => {
+export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -487,6 +483,4 @@ const Home = () => {
       <Footer />
     </div>
   );
-};
-
-export default Home;
+}

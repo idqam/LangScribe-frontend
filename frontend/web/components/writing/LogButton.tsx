@@ -8,6 +8,7 @@ import { useVocabStore } from "@/app/store/VocabStore";
 import { toast } from "sonner";
 import commonWords from "@/app/data/commonWords.json";
 import { useInsightsStore } from "@/app/store/InsightsStore";
+import { Loader2 } from "lucide-react";
 
 export const LogButton = () => {
   const t = useTranslations('Writing.controls');
@@ -111,9 +112,22 @@ export const LogButton = () => {
   return (
     <button
       onClick={handleLog}
-      className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+      disabled={isGeneratingInsights}
+      className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0 flex items-center gap-2"
     >
-      {t('logButton')}
+      {isGeneratingInsights ? (
+        <>
+          <Loader2 className="w-5 h-5 animate-spin" />
+          <span>Generating Insights...</span>
+        </>
+      ) : (
+        <>
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          </svg>
+          <span>{t('logButton')}</span>
+        </>
+      )}
     </button>
   );
 };
