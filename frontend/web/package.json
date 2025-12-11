@@ -20,7 +20,6 @@
     "clsx": "^2.1.1",
     "compromise": "^14.14.4",
     "date-fns": "^3.0.0",
-    "es-compromise": "^0.2.11",
     "framer-motion": "^10.16.0",
     "franc-min": "^6.2.0",
     "immer": "^10.2.0",

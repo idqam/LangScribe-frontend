@@ -1,13 +1,13 @@
 "use client";
 import { useWritingPadStore } from "@/app/store/WritingStore";
-import { LogButton } from "./LogButton";
+// import { LogButton } from "./LogButton";
 import { useTranslations } from "next-intl";
 import { FileText, Hash, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export const WritingPad = () => {
   const { text, wordCount, charCount, setText } = useWritingPadStore();
-  const t = useTranslations('Writing.pad');
+  const t = useTranslations("Writing.pad");
   const [writingTime, setWritingTime] = useState(0);
   const [isWriting, setIsWriting] = useState(false);
 
@@ -15,7 +15,7 @@ export const WritingPad = () => {
     let interval: NodeJS.Timeout;
     if (isWriting) {
       interval = setInterval(() => {
-        setWritingTime(prev => prev + 1);
+        setWritingTime((prev) => prev + 1);
       }, 1000);
     }
     return () => clearInterval(interval);
@@ -31,7 +31,7 @@ export const WritingPad = () => {
   const formatTime = (seconds: number) => {
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, '0')}`;
+    return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
   const uniqueWords = new Set(
@@ -64,7 +64,9 @@ export const WritingPad = () => {
               </div>
               <div>
                 <div className="text-xs text-slate-500">Unique</div>
-                <div className="font-semibold text-slate-900">{uniqueWords}</div>
+                <div className="font-semibold text-slate-900">
+                  {uniqueWords}
+                </div>
               </div>
             </div>
             <div className="flex items-center gap-2 text-sm">
@@ -73,7 +75,9 @@ export const WritingPad = () => {
               </div>
               <div>
                 <div className="text-xs text-slate-500">Time</div>
-                <div className="font-semibold text-slate-900">{formatTime(writingTime)}</div>
+                <div className="font-semibold text-slate-900">
+                  {formatTime(writingTime)}
+                </div>
               </div>
             </div>
           </div>
@@ -85,7 +89,7 @@ export const WritingPad = () => {
         <textarea
           value={text}
           className="w-full h-full resize-none focus:outline-none text-slate-900 text-lg leading-[1.75] placeholder:text-slate-400"
-          placeholder={t('placeholder')}
+          placeholder={t("placeholder")}
           onChange={handleTextChange}
         />
       </div>
@@ -96,7 +100,7 @@ export const WritingPad = () => {
           <div className="flex items-center gap-3">
             <div className="flex items-center gap-2 text-sm text-slate-600">
               <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-              <span>{t('autoSaved')}</span>
+              <span>{t("autoSaved")}</span>
               <span className="text-slate-400">• Just now</span>
             </div>
           </div>
@@ -107,12 +111,13 @@ export const WritingPad = () => {
               <div className="w-32 h-2 bg-slate-200 rounded-full overflow-hidden">
                 <div
                   className="h-full bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full transition-all duration-300"
-                  style={{ width: `${Math.min((wordCount / 200) * 100, 100)}%` }}
+                  style={{
+                    width: `${Math.min((wordCount / 200) * 100, 100)}%`,
+                  }}
                 />
               </div>
               <span className="text-xs text-slate-500">{wordCount}/200</span>
             </div>
-            <LogButton />
           </div>
         </div>
       </div>
